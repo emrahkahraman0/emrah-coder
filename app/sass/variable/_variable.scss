@@ -1,0 +1,81 @@
+//Variable.scss
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+$base_color: #fff;
+$primary_color: #034833;
+$two_color: #008000;
+$three_color: #111214;
+$four_color: #727272;
+$five_color: #e3dbd8;
+$six_color: #f1f5eb;
+$one_family: "Roboto", sans-serif;
+$two_family: "Open Sans", sans-serif;
+$large_size: 18px;
+$medium_size: 16px;
+$regular_size: 14px;
+$small_size: 12px;
+
+//Media
+
+//X_Large
+@mixin x_large() {
+  @media only screen and (max-width: 1400px) {
+    @content;
+  }
+}
+//Large
+@mixin large() {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+//Notebook
+@mixin notebook() {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+//Tablet
+@mixin tablet() {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+//X_Tablet
+@mixin x_tablet() {
+  @media only screen and (max-width: 575px) {
+    @content;
+  }
+}
+//Mobil
+@mixin mobil() {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+//Small
+@mixin small() {
+  @media only screen and (max-width: 350px) {
+    @content;
+  }
+}
+//X_Small
+@mixin x_small() {
+  @media only screen and (max-width: 250px) {
+    @content;
+  }
+}
+
+//Owl_Carousel
+.owl-carousel .owl-stage,
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: auto;
+  touch-action: auto;
+}
+
+//Align_İtems
+.align_items {
+  display: flex;
+  align-items: center;
+}
