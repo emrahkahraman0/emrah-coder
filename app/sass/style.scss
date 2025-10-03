@@ -87,10 +87,10 @@ body {
         }
 
         //ul
-        ul {
+        .dropdown {
           width: 200px;
           position: absolute;
-          top: 26px;
+          top: 140%;
           left: 0;
           z-index: 2;
           padding: 15px 0 15px 10px;
@@ -283,9 +283,9 @@ body {
           }
 
           //ul
-          ul {
+          .dropdown {
             width: 100%;
-            top: 30px;
+            top: 25px;
             padding: 15px 0;
 
             li {
@@ -1854,6 +1854,99 @@ body {
 ///// PROJECTS-DETAİLS.HTML \\\\\
 
 ///// TEAMS.HTML \\\\\
+
+//Teams#
+#teams {
+  width: 100%;
+  padding: 100px 0;
+
+  //teams
+  .teams {
+    text-align: center;
+    //&_item
+    &_item {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      img {
+        width: 100%;
+      }
+      h6 {
+        padding-top: 15px;
+        a {
+          text-transform: uppercase;
+          font-size: $large_size;
+          color: $primary_color;
+          font-weight: bold;
+        }
+      }
+      h5 {
+        padding-top: 10px;
+        font-size: $medium_size;
+        color: $four_color;
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+      .read_more {
+        margin-top: 20px;
+        display: inline-block;
+        background-color: $two_color;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        color: $base_color;
+        font-weight: bold;
+        span {
+          font-size: $medium_size;
+        }
+        i {
+          font-size: $large_size;
+        }
+      }
+
+      //Notebook
+      @include notebook {
+        h6 {
+          a {
+            font-size: $medium_size;
+          }
+        }
+        h5 {
+          font-size: $regular_size;
+        }
+        .read_more {
+          padding: 8px 15px;
+          span {
+            font-size: $regular_size;
+          }
+          i {
+            font-size: $medium_size;
+          }
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          a {
+            font-size: $regular_size;
+          }
+        }
+        h5 {
+          font-size: $small_size;
+        }
+        .read_more {
+          padding: 8px 15px;
+          span {
+            font-size: $small_size;
+          }
+          i {
+            font-size: $regular_size;
+          }
+        }
+      }
+    }
+  }
+}
 
 ///// TEAMS-DETAİLS.HTML \\\\\
 
