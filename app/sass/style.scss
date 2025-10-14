@@ -2653,7 +2653,56 @@ body {
 
 ///// BLOG.HTML \\\\\
 
+//Blog#
+#blog {
+  width: 100%;
+  padding: 100px 0;
+
+  //blog
+  .blog {
+    //&_posts
+    &_posts {
+      //&_article
+      &_article {
+        //&_item
+        &_item {
+          img {
+            width: 100%;
+          }
+          h6 {
+          }
+        }
+      }
+    }
+    //&_sidebar
+    &_sidebar {
+      //&_item
+      &_item {
+        //&_search
+        &_search {
+        }
+        //&_categories
+        &_categories {
+        }
+        //&_latests
+        &_latest {
+        }
+      }
+    }
+  }
+}
+
 ///// BLOG-DETAİLS.HTML \\\\\
+
+//Blog_Details#
+#blog_details {
+  width: 100%;
+  padding: 100px 0;
+
+  //blog_details
+  .blog_details {
+  }
+}
 
 ///// CONTACT.HTML \\\\\
 
