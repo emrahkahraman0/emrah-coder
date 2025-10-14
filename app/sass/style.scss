@@ -1843,7 +1843,188 @@ body {
 
 ///// PRİCİNGS.HTML \\\\\
 
+//Pricings#
+#pricings {
+  width: 100%;
+  padding: 100px 0;
+
+  //pricings
+  .pricings {
+    text-align: center;
+    //&_item
+    &_item {
+      h5 {
+        padding: 10px 0;
+        background-color: $two_color;
+        color: $base_color;
+        font-family: $one_family;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: normal;
+        font-size: $medium_size;
+      }
+      h6 {
+        padding-top: 30px;
+        font-family: $two_family;
+        color: $primary_color;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      ul {
+        padding-top: 50px;
+        li {
+          color: $four_color;
+          font-size: $regular_size;
+          padding-bottom: 15px;
+        }
+      }
+      a {
+        margin-top: 20px;
+        width: 100%;
+        display: inline-block;
+        background-color: $two_color;
+        padding: 10px 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: $medium_size;
+        color: $base_color;
+      }
+
+      //Large
+      @include large {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      //Tablet
+      @include tablet {
+        h5 {
+          font-size: $regular_size;
+        }
+        h6 {
+          padding-top: 25px;
+          font-size: 20px;
+        }
+        ul {
+          padding-top: 40px;
+        }
+        a {
+          font-size: $regular_size;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h5 {
+          padding: 8px 0;
+          font-size: $small_size;
+        }
+        h6 {
+          padding-top: 25px;
+          font-size: $large_size;
+        }
+        ul {
+          li {
+            font-size: $small_size;
+          }
+        }
+        a {
+          padding: 10px 15px;
+          font-size: $small_size;
+        }
+      }
+    }
+  }
+}
+
 /// ///// FAQS.HTML \\\\\
+
+//Faqs
+#faqs {
+  width: 100%;
+  padding: 100px 0;
+
+  //faqs
+  .faqs {
+    //&_item
+    &_item {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      //&_btn
+      &_btn {
+        background-color: $two_color;
+        font-family: $one_family;
+        font-weight: 500;
+        color: $base_color;
+        cursor: pointer;
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+        font-size: $medium_size;
+        transition: 0.4s;
+      }
+
+      .active {
+        background-color: $three_color;
+      }
+
+      &_btn {
+        &:hover {
+          background-color: $three_color;
+        }
+        &:after {
+          content: "\002B";
+          color: $base_color;
+          font-weight: bold;
+          float: right;
+          margin-left: 5px;
+        }
+      }
+
+      .active:after {
+        content: "\2212";
+      }
+
+      &_panel {
+        background-color: $five_color;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        p {
+          padding: 15px 20px;
+          font-size: $regular_size;
+          line-height: 19px;
+          color: $primary_color;
+        }
+      }
+
+      //&_Tablet
+      @include tablet {
+        //&_btn
+        &_btn {
+          font-size: $regular_size;
+        }
+      }
+      //&_Mobil
+      @include mobil {
+        //&_btn
+        &_btn {
+          font-size: $regular_size;
+        }
+        //&_panel
+        &_panel {
+          p {
+            padding: 15px;
+            font-size: $small_size;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+  }
+}
 
 ///// SERVİCES.HTML \\\\\
 
@@ -2019,7 +2200,211 @@ body {
 
 ///// PROJECTS.HTML \\\\\
 
+//Projects#
+#projects {
+  width: 100%;
+  padding: 100px 0;
+
+  //projects
+  .projects {
+    text-align: center;
+    //&_item
+    &_item {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      h6 {
+        padding-top: 20px;
+        a {
+          font-family: $one_family;
+          text-transform: uppercase;
+          font-size: $large_size;
+          color: $primary_color;
+          font-weight: bold;
+        }
+      }
+      h5 {
+        padding-top: 15px;
+        a {
+          color: $two_color;
+          font-size: $medium_size;
+          line-height: normal;
+          text-transform: capitalize;
+          font-weight: 500;
+        }
+      }
+      p {
+        padding-top: 20px;
+        font-family: $two_family;
+        font-size: $medium_size;
+        color: $four_color;
+        line-height: 24px;
+        font-weight: 400;
+      }
+      .read_more {
+        margin-top: 30px;
+        display: inline-block;
+        background-color: $two_color;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        color: $base_color;
+        font-weight: bold;
+        span {
+          font-family: $two_family;
+          font-size: $regular_size;
+        }
+        i {
+          font-size: $medium_size;
+        }
+      }
+
+      //Notebook
+      @include notebook {
+        h6 {
+          a {
+            font-size: $medium_size;
+          }
+        }
+        h5 {
+          padding-top: 13px;
+          a {
+            font-size: $regular_size;
+          }
+        }
+        p {
+          font-size: $regular_size;
+          line-height: 20px;
+        }
+      }
+      //Tablet
+      @include tablet {
+        .read_more {
+          margin-top: 20px;
+          padding: 8px 15px;
+        }
+      }
+      //Mobil
+      @include mobil {
+        h6 {
+          padding-top: 15px;
+          a {
+            font-size: $regular_size;
+          }
+        }
+        h5 {
+          padding-top: 10px;
+          a {
+            font-size: $small_size;
+          }
+        }
+        p {
+          font-size: $small_size;
+          line-height: normal;
+        }
+        .read_more {
+          margin-top: 20px;
+          padding: 5px 10px;
+          span {
+            font-size: $small_size;
+          }
+          i {
+            font-size: $regular_size;
+          }
+        }
+      }
+    }
+  }
+}
+
 ///// PROJECTS-DETAİLS.HTML \\\\\
+
+//Projects_Details#
+#projects_details {
+  width: 100%;
+  padding: 100px 0;
+
+  //projects_details
+  .projects_details {
+    //&_image
+    &_image {
+      img {
+        width: 100%;
+      }
+    }
+    //&_text
+    &_text {
+      h6 {
+        font-family: $one_family;
+        text-transform: uppercase;
+        font-size: $large_size;
+        color: $primary_color;
+        font-weight: bold;
+      }
+      h5 {
+        padding-top: 20px;
+        color: $two_color;
+        line-height: normal;
+        font-size: $medium_size;
+      }
+      p {
+        padding-top: 30px;
+        padding-bottom: 50px;
+        font-family: $two_family;
+        font-size: $medium_size;
+        color: $four_color;
+        line-height: 24px;
+        font-weight: 400;
+      }
+    }
+
+    //Notebook
+    @include notebook {
+      text-align: center;
+      //&_text
+      &_text {
+        padding-top: 30px;
+      }
+    }
+    //Tablet
+    @include tablet {
+      //&_text
+      &_text {
+        h6 {
+          font-size: $medium_size;
+        }
+        h5 {
+          padding-top: 15px;
+          font-size: $regular_size;
+        }
+        p {
+          padding-top: 20px;
+          padding-bottom: 35px;
+          font-size: $regular_size;
+          line-height: 22px;
+        }
+      }
+    }
+    //Mobil
+    @include mobil {
+      //&_text
+      &_text {
+        h6 {
+          font-size: $regular_size;
+        }
+        h5 {
+          padding-top: 12px;
+          font-size: $small_size;
+        }
+        p {
+          padding-top: 15px;
+          font-size: $small_size;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}
 
 ///// TEAMS.HTML \\\\\
 
