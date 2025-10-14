@@ -2656,3 +2656,173 @@ body {
 ///// BLOG-DETAİLS.HTML \\\\\
 
 ///// CONTACT.HTML \\\\\
+
+//Contact#
+#contact {
+  width: 100%;
+  padding: 100px 0;
+
+  //contact
+  .contact {
+    //&_item
+    &_item {
+      h5 {
+        font-family: $one_family;
+        font-size: $large_size;
+        line-height: normal;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $primary_color;
+        padding-bottom: 35px;
+      }
+      //form
+      .form {
+        input,
+        textarea {
+          width: 100%;
+          border: 1px solid $five_color;
+          padding: 10px;
+          color: $four_color;
+          font-size: $medium_size;
+          margin-bottom: 20px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          &::placeholder {
+            font-family: $one_family;
+            font-size: $medium_size;
+            color: $four_color;
+          }
+        }
+        button {
+          width: 100%;
+          padding: 8px 0;
+          background-color: $two_color;
+          color: $base_color;
+          font-size: $medium_size;
+          text-transform: uppercase;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+      //&_box
+      &_box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .icon {
+          i {
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            background-color: $two_color;
+            border-radius: 50%;
+            font-size: $regular_size;
+            color: $base_color;
+          }
+        }
+        .text {
+          padding-left: 15px;
+          a,
+          p {
+            font-family: $two_family;
+            color: $primary_color;
+            font-size: $medium_size;
+            font-weight: 400;
+            line-height: normal;
+          }
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      //&_Tablet
+      @include tablet {
+        text-align: center;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        h5 {
+          font-size: $medium_size;
+        }
+        //form
+        .form {
+          input,
+          textarea {
+            text-align: center;
+            font-size: $regular_size;
+            &::placeholder {
+              font-size: $regular_size;
+            }
+          }
+          button {
+            font-size: $regular_size;
+          }
+        }
+        //&_box
+        &_box {
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 30px;
+          //icon
+          .icon {
+            i {
+              width: 30px;
+              height: 30px;
+              line-height: 30px;
+              font-size: $small_size;
+            }
+          }
+          //text
+          .text {
+            padding-top: 10px;
+            padding-left: 0;
+            a,
+            p {
+              font-size: $regular_size;
+            }
+          }
+        }
+      }
+      //&_Mobil
+      @include mobil {
+        h5 {
+          font-size: $regular_size;
+        }
+        //form
+        .form {
+          input,
+          textarea {
+            font-size: $small_size;
+            &::placeholder {
+              font-size: $small_size;
+            }
+          }
+          button {
+            font-size: $small_size;
+          }
+        }
+        //&_box
+        &_box {
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 20px;
+
+          //text
+          .text {
+            padding-top: 10px;
+            a,
+            p {
+              font-size: $small_size;
+            }
+          }
+        }
+      }
+    }
+  }
+}
